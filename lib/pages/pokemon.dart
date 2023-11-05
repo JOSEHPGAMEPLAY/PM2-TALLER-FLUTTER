@@ -53,7 +53,7 @@ class Pokemon extends StatelessWidget {
               Title(
                 color: Colors.black,
                 child: Text(
-                  ('Habiidades del pokemon ' + pokemonu['nombre']),
+                  ('Habilidades del pokemon ' + pokemonu['nombre']),
                   style: const TextStyle(
                       fontSize: 30, fontWeight: FontWeight.w800),
                 ),
@@ -65,13 +65,25 @@ class Pokemon extends StatelessWidget {
                   );
                 }).toList(),
               ),
-              Container(alignment: Alignment.bottomRight,child: CircleAvatar(radius:100,backgroundColor: Colors.deepPurple[50],foregroundImage: AssetImage(pokemonu['avatar'])),)
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Container(
+                  alignment: Alignment.bottomRight,
+                  child: CircleAvatar(
+                      radius: 100,
+                      backgroundColor: Colors.deepPurple[50],
+                      foregroundImage: AssetImage(pokemonu['avatar'])),
+                ),
+              )
             ],
           ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
-          onPressed: () {}, child: const Icon(Icons.turn_left_rounded)),
+          onPressed: () {
+            Navigator.pushNamed(context, '/home');
+          },
+          child: const Icon(Icons.turn_left_rounded)),
       floatingActionButtonLocation: FloatingActionButtonLocation.startDocked,
     );
   }
