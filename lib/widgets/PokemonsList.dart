@@ -29,11 +29,10 @@ class PokemonsList extends StatelessWidget {
             Icons.arrow_right,
             size: 40,
           ),
-          onLongPress: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => Pokemon(pokemonu: pokemonsMap[index],),
-              ),
+          onTap: () {
+            Navigator.of(context).pushNamed(
+              '/pokemon',
+              arguments: {'pokemonu':pokemonsMap[index]},
             );
           },
         );
