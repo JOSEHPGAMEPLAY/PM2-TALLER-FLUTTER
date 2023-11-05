@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pokemons/data/pokemonsMap.dart';
+import 'package:pokemons/pages/pages.dart';
 
 class PokemonsList extends StatelessWidget {
   const PokemonsList({super.key});
@@ -13,7 +14,6 @@ class PokemonsList extends StatelessWidget {
       ),
       itemBuilder: (BuildContext context, index) {
         index = index + 1;
-
         String avatar = pokemonsMap[index]?['avatar'];
         String nombre = pokemonsMap[index]?['nombre'];
         String descripcion = pokemonsMap[index]?['descripcion'];
@@ -29,7 +29,13 @@ class PokemonsList extends StatelessWidget {
             Icons.arrow_right,
             size: 40,
           ),
-          onLongPress: () {},
+          onLongPress: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => Pokemon(pokemonu: pokemonsMap[index],),
+              ),
+            );
+          },
         );
       },
       itemCount: pokemonsMap.length,

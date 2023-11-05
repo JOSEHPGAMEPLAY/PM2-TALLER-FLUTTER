@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme:AppTheme.darkTheme,
-      title: 'Material App',
+      title: 'Pokedex',
       initialRoute: Rutas.initialRoute,
       routes: Rutas.routes,
       onGenerateRoute: Rutas.onGernerate,
