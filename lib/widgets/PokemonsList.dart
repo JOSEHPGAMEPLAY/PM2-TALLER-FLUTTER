@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pokemons/data/pokemonsMap.dart';
-import 'package:pokemons/pages/pages.dart';
 
 class PokemonsList extends StatelessWidget {
   const PokemonsList({super.key});
