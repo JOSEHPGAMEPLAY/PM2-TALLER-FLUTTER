@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pokemons/widgets/Widgets.dart';
 
-
 class Home extends StatelessWidget {
   const Home({super.key});
 
@@ -20,6 +19,17 @@ class Home extends StatelessWidget {
       ),
       body: const Center(
         child: PokemonsList(),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          showDialog(
+                context: context,
+                builder: (BuildContext context){
+                  return const MyDialog();
+                }
+            );
+        },
+        child: const Icon(Icons.add),
       ),
     );
   }
