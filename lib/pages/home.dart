@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokemons/widgets/Widgets.dart';
 
 
 class Home extends StatelessWidget {
@@ -18,7 +19,7 @@ class Home extends StatelessWidget {
         ],
       ),
       body: const Center(
-        child: Text('Hello World'),
+        child: PokemonsList(),
       ),
     );
   }
